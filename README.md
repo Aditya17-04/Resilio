@@ -5,10 +5,10 @@
 ## 🚀 Quick Start
 
 **Double-click `start.bat`** in this folder. It launches:
-- **Backend** (FastAPI) → `http://localhost:8000`  
-- **Frontend** (React) → `http://localhost:5173`
+- **Backend** (FastAPI) → `http://localhost:8001`  
+- **Frontend** (React) → `http://localhost:5170`
 
-Open `http://localhost:5173` in your browser.
+Open `http://localhost:5170` in your browser.
 
 ---
 
@@ -18,7 +18,7 @@ Open `http://localhost:5173` in your browser.
 # Backend
 cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+uvicorn main:app --reload --port 8001
 
 # Frontend (new terminal)
 cd frontend
@@ -40,7 +40,7 @@ npm run dev
 
 ---
 
-## API Endpoints (`http://localhost:8000`)
+## API Endpoints (`http://localhost:8001`)
 
 ```
 GET  /api/risk/overview          # KPI summary
@@ -56,7 +56,7 @@ POST /api/simulator/run          # Run disruption scenario
 
 **Simulator example:**
 ```bash
-curl -X POST http://localhost:8000/api/simulator/run \
+curl -X POST http://localhost:8001/api/simulator/run \
   -H "Content-Type: application/json" \
   -d '{"scenario_type":"port_closure","target_country":"China"}'
 ```
